@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Control from "./Control.js";
-
 import './App.css';
 import './decoration.css';
 import LoginForm from "./LoginForm/LoginForm";
@@ -37,9 +36,6 @@ class App extends Component {
   }
 
   handleLogin(user) {
-    console.log(this.state);
-    console.log("user: " + user.userName);
-    console.log("password: " + user.password);
     if (this.checkLoginSuccess(user) != 1) {
       alert("Wrong userName or password !");
       return;
