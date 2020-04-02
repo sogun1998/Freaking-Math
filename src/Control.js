@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import './decoration.css';
+import ProgressBar from "./ProgressBar.js";
 class Control extends Component {
     constructor(props){
         super(props);
         this.timer = null;
-        this.id = null;
-        //this.timer2 = null
+        this.childTime = React.createRef();
         this.state = {
-            //progress: 100,
             num1: 0,
             num2: 0,
             sumNotEqual: 0,
@@ -21,21 +20,14 @@ class Control extends Component {
         this.handleClickStart = this.handleClickStart.bind(this);
         this.checkSum = this.checkSum.bind(this);
         this.gameOver = this.gameOver.bind(this);
-        //this.timeRunning = this.timeRunning.bind(this);
     }
-    // timeRunning(){
-    //     if(this.state.progress === 0){
-    //         clearTimeout(this.timer2);
-    //         this.setState({progress: 100});
-    //         return;
-    //     }else{
-        
-    //     this.setState({ progress: this.state.progress - 1 });
-    //     this.timer2 = setTimeout(this.timeRunning.bind(this), 3000/130);
-    //     }
-        
-
-    // }
+    timeRemaining(){
+        this.childTime.current.timeRemaining();
+    }
+    timeClear(){
+        this.childTime.current.timeClear();
+    }
+   
     randomNum(min,max){
         
         const rand = Math.floor(min + Math.random() * (max - min));
@@ -54,7 +46,7 @@ class Control extends Component {
         this.setState({ sumNotEqual: sum });
         
         this.timer=setTimeout(this.gameOver.bind(this), 3000);
-        //this.timeRunning();
+        this.timeRemaining();
     }
     checkSum(preSignal){
 
@@ -67,7 +59,7 @@ class Control extends Component {
         }
         else{
             clearTimeout(this.timer);
-            //clearTimeout(this.timer2);
+            this.timeClear();
             
             this.setState({ point: this.state.point + 1 });
             this.handleClickStart();
@@ -76,6 +68,7 @@ class Control extends Component {
     }
     gameOver(){
         clearTimeout(this.timer);
+        this.timeClear();
         this.setState({isActive: false});
     }
     render(){
@@ -83,11 +76,9 @@ class Control extends Component {
         return(
             
         <div>
-                <span class="name">FREAKING MATH</span><br/>
-                {/* <div class="timeBar">
-		            <div id="time" style={{width: this.state.progress  + "%"}}></div>
-	            </div> */}
-    
+                
+               
+                <ProgressBar ref={this.childTime} />
 	            {/* <button class="pinkbtn ranking" onclick="location.href='ranking.php'">RANKING</button> */}
 	            <button class="pinkbtn start" onClick={() => this.handleClickStart()}>START</button>
 	            
