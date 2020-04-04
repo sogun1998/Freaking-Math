@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Control from "./Control.js";
+import Level from "./Level.js";
 import './App.css';
 import './decoration.css';
 import LoginForm from "./LoginForm/LoginForm";
@@ -56,9 +56,9 @@ class App extends Component {
     } else {
       return (
         <div >
-          <span class="name">FREAKING MATH</span><br />
+          <span class="name">クイック数学プラス</span><br />
 
-          <Control />
+          <Level />
         </div>
       );
     }

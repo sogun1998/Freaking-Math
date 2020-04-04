@@ -42,7 +42,7 @@ class LoginForm extends Component {
           <input
             type="text"
             className="userName"
-            placeholder="userName"
+            placeholder="ユーザ名"
             value={this.state.userName}
             onChange={this.handleChangeUserName}
           />
@@ -51,7 +51,7 @@ class LoginForm extends Component {
           <input
             type="password"
             className="password"
-            placeholder="password"
+            placeholder="パスワード"
             value={this.state.password}
             onChange={this.handleChangePassword}
           />
@@ -61,7 +61,7 @@ class LoginForm extends Component {
             className="button"
             onClick={this.handleSubmit}
           >
-            LOGIN
+            ログイン
           </button>
         </div>
       </div>

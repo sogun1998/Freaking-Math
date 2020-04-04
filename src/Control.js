@@ -33,6 +33,8 @@ class Control extends Component {
         return rand;
     }
     handleClickStart(){
+        
+        const setTime = 1000;
         if(!this.state.isActive) {
             this.setState({isActive: true});
             this.setState({ point: 0 });
@@ -40,7 +42,7 @@ class Control extends Component {
         
         this.startRandom();
         
-        this.timer=setTimeout(this.gameOver.bind(this), 3000);
+        this.timer=setTimeout(this.gameOver.bind(this), (setTime*this.props.dataFromParent ));
         this.timeRemaining();
     }
     checkSum(preSignal){
@@ -72,24 +74,24 @@ class Control extends Component {
         <div>
                 
                
-                <ProgressBar ref={this.childTime} />
+                <ProgressBar ref={this.childTime} dataFromSibling = {this.props.dataFromParent} />
 	            {/* <button class="pinkbtn ranking" onclick="location.href='ranking.php'">RANKING</button> */}
-	            <button class="pinkbtn start" onClick={() => this.handleClickStart()}>START</button>
+	            <button class="pinkbtn start" onClick={() => this.handleClickStart()}>スタート</button>
 	            
                 {/* <button class="pinkbtn logout" onclick="location.href='logout.php'">LOGOUT</button> */}
                 <div className={(this.state.isActive)? "":"display-none"}>
                 <div class="main">
 
           
-                <span class="point">Point : {this.state.point}</span><br/>
+                <span class="point">ポイント : {this.state.point}</span><br/>
                 <Number ref={this.childNumber}/>
                
                 </div>	
                 <br/>
-                <button class="greenbtn true" onClick={() => this.checkSum(1)}>TRUE</button>
-                <button class="greenbtn false" onClick={() => this.checkSum(2)}>FALSE</button>
+                <button class="greenbtn true" onClick={() => this.checkSum(1)}>真</button>
+                <button class="greenbtn false" onClick={() => this.checkSum(2)}>偽</button>
                 </div>
-                <div className={(this.state.isActive)? "display-none":"name"}>Thua cuoc</div>
+                <div className={(this.state.isActive)? "display-none":"name"}>ゲームオーバー</div>
                 </div>
         );
     }

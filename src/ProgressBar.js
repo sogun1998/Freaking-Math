@@ -9,9 +9,10 @@ class ProgressBar extends Component{
         this.timeClear = this.timeClear.bind(this);
     }
     timeRemaining(){
-        
+        this.render();
+        const setTime = 1000;
         var width = 1;
-        this.id = setInterval(frame, 3000/105);
+        this.id = setInterval(frame, ((setTime*this.props.dataFromSibling)/105));
         function frame() {
             if (width >= 100) {
                 clearInterval(this.id);

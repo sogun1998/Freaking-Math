@@ -21,7 +21,7 @@ class Number extends Component{
     startRandom(){
         const num1 = this.randomNum(1,20);
         const num2 = this.randomNum(1,20);
-        const sum = num1+num2+this.randomNum(-2,2);
+        const sum = num1+num2+this.randomNum(-1,1);
         this.setState({ num1: num1 });
         this.setState({ num2: num2 });
         this.setState({ sumNotEqual: sum });
