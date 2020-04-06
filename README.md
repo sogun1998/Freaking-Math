@@ -12,7 +12,7 @@
 | Đặng Hoàng Tuấn | 20166911 |
 
 # インタフェース
-<img src = "https://imgur.com/mnix1jH" >
+<img src = "https://i.imgur.com/mnix1jH.png" >
 
 # アカウント
 
