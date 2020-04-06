@@ -12,7 +12,8 @@
 | Đặng Hoàng Tuấn | 20166911 |
 
 # インタフェース
-<img src = "https://imgur.com/a/WxrM4u8">
+<img src = "https://imgur.com/a/WxrM4u8" >
+
 # アカウント
 
 | ユーザ名 | パスワード 
