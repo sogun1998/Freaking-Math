@@ -1,8 +1,8 @@
 # Game "Freaking-Math" - 「クイック数学プラス」ゲーム
 
-#Members - メンバー
-##Team (チーム)：2
-##Class (クラス)：火１
+# Members - メンバー
+## Team (チーム)：2
+## Class (クラス)：火１
 | 名前 | 学籍番号 
 |------|--------|
 | Hoàng Đình Hinh | 20166078 |
@@ -11,4 +11,5 @@
 | Nguyễn Đức Anh A | 20165735 |
 | Đặng Hoàng Tuấn | 20166911 |
 
-#インタフェース
+# インタフェース
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/WxrM4u8" data-context="false" ><a href="//imgur.com/a/WxrM4u8"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
