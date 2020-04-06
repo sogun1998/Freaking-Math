@@ -12,4 +12,9 @@
 | Đặng Hoàng Tuấn | 20166911 |
 
 # インタフェース
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/WxrM4u8" data-context="false" ><a href="//imgur.com/a/WxrM4u8"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<img src = "https://imgur.com/a/WxrM4u8">
+# アカウント
+| ユーザ名 | パスワード 
+|---------|----------|
+| zovivo | 123456 |
+| sogun1998 | 123456 |
